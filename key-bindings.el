@@ -2,7 +2,6 @@
 (global-set-key (kbd "C-c w") 'toggle-show-trailing-whitespace)
 (global-set-key (kbd "C-c n") 'cleanup-buffer)
 (global-set-key (kbd "C-c C-n") 'cleanup-buffer)
-(global-set-key (kbd "C-c C-<return>") 'delete-blank-lines)
 
 ;; Redirect back to minibuffer
 (global-set-key (kbd "<f2>") 'switch-to-minibuffer-window)
@@ -39,9 +38,8 @@
 
 ;; Clever newlines
 (global-set-key (kbd "C-o") 'open-line-and-indent)
-(global-set-key (kbd "<C-return>") 'open-line-below)
-(global-set-key (kbd "<C-S-return>") 'open-line-above)
-(global-set-key (kbd "<M-return>") 'new-line-dwim)
+(global-set-key (kbd "C-c C-b") 'open-line-below)
+(global-set-key (kbd "C-c C-a") 'open-line-above)
 
 ;; Copy|Delete Lines
 (global-set-key (kbd "C-c k") 'copy-line)
