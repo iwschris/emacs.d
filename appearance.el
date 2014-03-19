@@ -20,8 +20,10 @@
 ;; org-mode colors
 (setq org-todo-keyword-faces
       '(
-        ("STARTED" . (:foreground "yellow" :weight bold))
         ("TODO" . (:foreground "red" :weight bold))
+        ("STARTED" . (:foreground "yellow" :weight bold))
+        ("WAITING" . (:foreground "blue" :weight bold))
+        ("SOMEDAY" . (:foreground "grey" :weight bold))
         ))
 
 ;; Set Font for all frames -- http://levien.com/type/myfonts/inconsolata.html
