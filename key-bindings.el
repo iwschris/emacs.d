@@ -1,7 +1,6 @@
 ;; Perform general cleanup.
 (global-set-key (kbd "C-c w") 'toggle-show-trailing-whitespace)
 (global-set-key (kbd "C-c n") 'cleanup-buffer)
-(global-set-key (kbd "C-c C-n") 'cleanup-buffer)
 
 ;; Redirect back to minibuffer
 (global-set-key (kbd "<f2>") 'switch-to-minibuffer-window)
@@ -56,11 +55,5 @@
 
 ;; Hippie Expand
 (global-set-key (kbd "C-c e") 'hippie-expand)
-
-;; Magit bindings
-(global-set-key (kbd "C-c p") 'magit-find-file-completing-read)
-
-;; Refresh Syntax Highlighting
-(global-set-key (kbd "C-c C-f") 'font-lock-fontify-buffer)
 
 (provide 'key-bindings)
