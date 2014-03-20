@@ -52,3 +52,19 @@
   "comment or uncomment current line"
   (interactive)
   (comment-or-uncomment-region (line-beginning-position) (line-end-position)))
+
+(defmacro toggle-breakpoint (command dstr)
+  "Creates interactive command `command', for inserting/removing
+ a debug line in a buffer."
+  (fset command
+        `(lambda ()
+          (interactive)
+          (end-of-line)
+          (set-mark (line-beginning-position))
+          (let* ((beg (region-beginning))
+                 (end (region-end))
+                 (current-line (s-trim (buffer-substring-no-properties beg end))))
+            (if (equal current-line ,dstr)
+                (kill-whole-line)
+              (progn (open-line-above)
+                     (insert ,dstr)))))))
