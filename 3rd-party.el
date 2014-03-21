@@ -13,4 +13,17 @@
 (require-package 'markdown-mode)
 (require-package 'puppet-mode)
 
+;; Jabber mode
+(require-package 'jabber)
+(setq jabber-account-list '(("hayden767@gmail.com"
+                             ;;   (:password . nil)
+                             (:network-server . "talk.google.com")
+                             (:port . 443)
+                             (:connection-type . ssl))
+                            ("ben@britecore.com"
+                             ;;   (:password . nil)
+                             (:network-server . "talk.google.com")
+                             (:port . 443)
+                             (:connection-type . ssl))))
+
 (provide '3rd-party)
