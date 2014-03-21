@@ -28,11 +28,13 @@
   (interactive)
   (setq show-trailing-whitespace (not show-trailing-whitespace)))
 
-(defun show-ws-and-linum-on-files ()
-  "Show trailing whitespace and line numbers on files only"
+(defun enable-file-editing-modes ()
+  "Enable these settings for *real* files: show trailing whitespace,
+electric pairs, and line numbers"
   (interactive)
   (when (not (eq buffer-file-name nil))
     (setq show-trailing-whitespace t)
+    (electric-pair-mode t)
     (linum-mode 1)))
 
 (defun untabify-buffer ()

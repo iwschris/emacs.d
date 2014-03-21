@@ -1,4 +1,5 @@
 ;; Turn off tool|scroll interface early in startup to avoid momentary display
+(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 
@@ -61,7 +62,7 @@
     (load file)))
 
 ;; Show trailing whitespace on files
-(add-hook 'after-change-major-mode-hook 'show-ws-and-linum-on-files)
+(add-hook 'after-change-major-mode-hook 'enable-file-editing-modes)
 
 ;; Bring in 3rd Party packages
 (require '3rd-party)
