@@ -15,6 +15,8 @@
 
 ;; Jabber mode
 (require-package 'jabber)
+(setq jabber-roster-show-title nil)
+(setq jabber-roster-line-format " %c %-25n %u %-8s (%r)")
 (setq jabber-account-list '(("hayden767@gmail.com"
                              ;;   (:password . nil)
                              (:network-server . "talk.google.com")
