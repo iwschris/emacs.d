@@ -54,4 +54,8 @@
 ;; Hippie Expand
 (global-set-key (kbd "C-c e") 'hippie-expand)
 
+;; Speedbar Shortcuts
+(global-set-key (kbd "M-s M-b") 'speedbar)
+(global-set-key (kbd "M-s M-f") 'speedbar-get-focus)
+
 (provide 'key-bindings)
