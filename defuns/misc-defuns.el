@@ -19,3 +19,14 @@
   (if (or arg (not buffer-file-name))
       (find-file (concat "/sudo:root@localhost:" (ido-read-file-name "File: ")))
     (find-alternate-file (concat "/sudo:root@localhost:" buffer-file-name))))
+
+(defun today ()
+  "Insert string for today's date nicely formatted in American style,
+e.g. 09-17-2000."
+  (interactive)                 ; permit invocation in minibuffer
+  (insert (format-time-string "%m-%d-%Y")))
+
+(defun sign-and-date ()
+  "Insert a signature & date. Ex. -- Ben Hayden 09/17/2000."
+  (interactive)
+  (insert (concat " -- Ben Hayden " (format-time-string "%m-%d-%Y"))))

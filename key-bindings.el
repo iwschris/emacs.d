@@ -58,4 +58,7 @@
 (global-set-key (kbd "M-s M-b") 'speedbar)
 (global-set-key (kbd "M-s M-f") 'speedbar-get-focus)
 
+;; Sign & Date
+(global-set-key (kbd "C-c s") 'sign-and-date)
+
 (provide 'key-bindings)
