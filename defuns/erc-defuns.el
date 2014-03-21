@@ -30,4 +30,4 @@
 
 ;; Use macro to define autojoin rooms for IWS
 (erc-autojoin
-    (("107.20.193.74") "#engineering" "#devops" "#triforce" "#office" "#quadsquad"))
+    (("107.20.193.74") "#engineering" "#devops" "#triforce" "#office" "#jlu"))
