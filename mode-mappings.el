@@ -13,4 +13,8 @@
 (add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.markdown$" . markdown-mode))
 
+;; Dotfile Configs
+(add-to-list 'auto-mode-alist '(".hgrc" . conf-mode))
+(add-to-list 'auto-mode-alist '(".gitconfig" . conf-mode))
+
 (provide 'mode-mappings)
