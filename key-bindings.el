@@ -61,4 +61,15 @@
 ;; Sign & Date
 (global-set-key (kbd "C-c s") 'sign-and-date)
 
+;; Magit Keys
+(global-set-key (kbd "M-g M-d") 'magit-diff-unstaged)
+(global-set-key (kbd "M-g M-s") 'magit-status)
+(global-set-key (kbd "M-g M-b") 'magit-branch-manager)
+(global-set-key (kbd "M-g M-a") 'magit-stage-all)
+(global-set-key (kbd "M-g M-c") 'magit-commit)
+(global-set-key (kbd "M-g C-M-c") 'magit-commit-amend)
+(global-set-key (kbd "M-g M-p") 'magit-push)
+(global-set-key (kbd "M-g M-l") 'magit-pull)
+(global-set-key (kbd "M-g M-r") 'magit-rebase-step)
+
 (provide 'key-bindings)
