@@ -22,4 +22,12 @@ re-downloaded in order to locate PACKAGE."
         (package-refresh-contents)
         (require-package package min-version t)))))
 
+;; Go ahead and install some essential libraries
+;; s - string functions
+;; dash - list functions
+;; f - fancy file / directory stuff
+(require-package 's)
+(require-package 'dash)
+(require-package 'f)
+
 (provide 'setup-package)
