@@ -5,5 +5,6 @@
                              (concat org-directory "/home.org")))
 (setq org-default-notes-file (concat org-directory "/notes.org"))
 (setq org-mobile-inbox-for-pull (concat org-directory "/inbox.org"))
+(set-face-attribute 'org-agenda-structure nil :foreground (find-color 'cyan))
 
 (provide 'setup-org)

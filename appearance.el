@@ -14,16 +14,31 @@
 
 ;; Set Solarized color theme
 (require-package 'color-theme-solarized)
-(load-theme 'solarized-dark t)
 (setq solarized-broken-srgb 'nil)
+(load-theme 'solarized-dark t)
+
+;; Color customizations
+(require 'solarized-definitions)
+;; Use find-color to find right solarized color
+(defun find-color (name)
+  (let* ((cells (display-color-cells))
+         (index (if window-system
+                    (if solarized-degrade
+                        3
+                      (if solarized-broken-srgb 2 1))
+                  (cond ((eq cells 16) 4)
+                        ((eq cells 8)  5)
+                        (t 3)))))
+    (nth index (assoc name solarized-colors))))
 
 ;; org-mode colors
 (setq org-todo-keyword-faces
       '(
-        ("TODO" . (:foreground "red" :weight bold))
-        ("STARTED" . (:foreground "yellow" :weight bold))
-        ("WAITING" . (:foreground "blue" :weight bold))
-        ("SOMEDAY" . (:foreground "grey" :weight bold))
+        ("TODO" . org-todo-kwd-face)
+        ("STARTED" . org-started-kwd-face)
+        ("WAITING" . org-waiting-kwd-face)
+        ("SOMEDAY" . org-someday-kwd-face)
+        ("DONE" . org-done-kwd-face)
         ))
 
 ;; Set Font for all frames -- http://levien.com/type/myfonts/inconsolata.html
