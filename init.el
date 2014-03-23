@@ -22,11 +22,11 @@
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file)
 
-;; Write backup/autosave files to own directory
-(defvar backups-dir (expand-file-name (concat user-emacs-directory "backups")))
-(setq backup-directory-alist (list (cons ".*" backups-dir)))
-(setq auto-save-list-file-prefix backups-dir)
-(setq auto-save-file-name-transforms `((".*" ,backups-dir t)))
+;; Write backup & autosave files to tmp/
+(setq backup-directory-alist
+  `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+  `((".*" ,temporary-file-directory t)))
 
 ;; Make backups of files, even when they're in version control
 (setq vc-make-backup-files t)

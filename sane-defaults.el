@@ -128,4 +128,15 @@
   (let ((use-dialog-box nil))
     ad-do-it))
 
+;; Better buffer switching
+(autoload 'ibuffer "ibuffer" "List buffers." t)
+;; Ensure ibuffer opens with point at the current buffer's entry.
+(defadvice ibuffer
+  (around ibuffer-point-to-most-recent) ()
+  "Open ibuffer with cursor pointed to most recent buffer name."
+  (let ((recent-buffer-name (buffer-name)))
+    ad-do-it
+    (ibuffer-jump-to-buffer recent-buffer-name)))
+(ad-activate 'ibuffer)
+
 (provide 'sane-defaults)

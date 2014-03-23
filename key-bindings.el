@@ -1,3 +1,10 @@
+;; New List buffers - ibuffer
+(global-set-key (kbd "C-x C-b") 'ibuffer)
+
+;; Search
+(global-set-key (kbd "C-s") 'isearch-forward-regexp)
+(global-set-key (kbd "C-r") 'isearch-backward-regexp)
+
 ;; Perform general cleanup.
 (global-set-key (kbd "C-c w") 'toggle-show-trailing-whitespace)
 (global-set-key (kbd "C-c n") 'cleanup-buffer)
@@ -71,5 +78,10 @@
 (global-set-key (kbd "M-g M-p") 'magit-push)
 (global-set-key (kbd "M-g M-l") 'magit-pull)
 (global-set-key (kbd "M-g M-r") 'magit-rebase-step)
+
+;; Aliases
+(defalias 'wm 'whitespace-mode)
+(defalias 'rs 'replace-string)
+(defalias 'll 'goto-line)
 
 (provide 'key-bindings)
