@@ -47,6 +47,7 @@
 ;; Setup extensions
 (eval-after-load 'erc '(require 'setup-erc))
 (eval-after-load 'org '(require 'setup-org))
+(eval-after-load 'tramp '(require 'setup-tramp))
 
 ;; Map files to modes
 (require 'mode-mappings)
