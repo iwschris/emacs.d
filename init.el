@@ -6,8 +6,13 @@
 ;; No splash screen please ... jeez
 (setq inhibit-startup-message t)
 
+;; Set path to dependencies
+(setq site-lisp-dir
+      (expand-file-name "site-lisp" user-emacs-directory))
+
 ;; Set up load path
 (add-to-list 'load-path user-emacs-directory)
+(add-to-list 'load-path site-lisp-dir)
 
 ;; Are we on a mac?
 (setq is-mac (equal system-type 'darwin))
@@ -21,6 +26,11 @@
 ;; Keep emacs Custom-settings in separate file
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file)
+
+;; Add external projects to load path
+(dolist (project (directory-files site-lisp-dir t "\\w+"))
+  (when (file-directory-p project)
+    (add-to-list 'load-path project)))
 
 ;; Write backup & autosave files to tmp/
 (setq backup-directory-alist
@@ -59,7 +69,7 @@
     (load file)))
 
 ;; Show trailing whitespace on files
-(add-hook 'after-change-major-mode-hook 'enable-file-editing-modes)
+(add-hook 'after-change-major-mode-hook 'show-ws-and-linum-on-files)
 
 ;; Bring in 3rd Party packages
 (require '3rd-party)

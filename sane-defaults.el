@@ -139,4 +139,8 @@
     (ibuffer-jump-to-buffer recent-buffer-name)))
 (ad-activate 'ibuffer)
 
+;; Turn on autopairing. Electric-pair-mode is a global mode,
+;; so enabling it will turn it on for all buffers
+(electric-pair-mode t)
+
 (provide 'sane-defaults)

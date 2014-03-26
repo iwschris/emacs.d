@@ -1,0 +1,3 @@
+[submodule "site-lisp/vagrant-tramp"]
+	path = site-lisp/vagrant-tramp
+	url = git@github.com:beardedprojamz/vagrant-tramp.git
