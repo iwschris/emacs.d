@@ -8,6 +8,16 @@
             (setq tab-width 4)
             (setq indent-tabs-mode t)))
 
+;; Update Indents for HTML
+(add-hook 'html-mode-hook
+          (function (lambda ()
+                      (setq sgml-basic-offset 4))))
+
+;; Update Indents for Puppet
+(add-hook 'puppet-mode-hook
+          (function (lambda ()
+                      (setq puppet-indent-level 4))))
+
 ;; Python mode hooks - Ipython and Breakpoints
 (add-hook 'python-mode-hook
           (lambda ()
