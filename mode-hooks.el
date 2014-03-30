@@ -1,5 +1,12 @@
 ;; Module for Mode-specific hooks
 
+;; XXX: Highlights some important keywords - the ':' is important
+(add-hook 'prog-mode-hook
+          (lambda()
+            (font-lock-add-keywords nil
+                                    '(("\\<\\(FIXME\\|TODO\\|XXX+\\|BUG\\):"
+                                       1 font-lock-warning-face prepend)))))
+
 ;; Since Go uses tabs, at least display them as
 ;; 4 columns instead of the default 8
 (add-hook 'go-mode-hook
