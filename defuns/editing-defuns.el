@@ -1,6 +1,14 @@
 ;;; editing-defuns.el --- Basic text editing defuns -*- lexical-binding: t; -*-
 (require 's)
 
+(defun go-up-10-lines ()
+  (interactive)
+  (previous-line 10))
+
+(defun go-down-10-lines ()
+  (interactive)
+  (next-line 10))
+
 (defun open-line-and-indent ()
   (interactive)
   (newline-and-indent)

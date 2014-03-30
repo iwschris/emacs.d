@@ -23,6 +23,12 @@
 ;; Edit file with sudo
 (global-set-key (kbd "M-s e") 'sudo-edit)
 
+;; toggle two most recent buffers
+(fset 'quick-switch-buffer [?\C-x ?b return])
+(global-set-key (kbd "s-b") 'quick-switch-buffer)
+
+(global-set-key (kbd "s-y") 'bury-buffer)
+
 ;; Window switching
 (global-set-key (kbd "C-c r") 'rotate-windows)
 
@@ -31,6 +37,10 @@
 (global-set-key (kbd "<end>") 'end-of-buffer)
 (global-set-key (kbd "M-p") 'backward-paragraph)
 (global-set-key (kbd "M-n") 'forward-paragraph)
+
+;; Go up & down 10 lines
+(global-set-key (kbd "M-<up>") 'go-up-10-lines)
+(global-set-key (kbd "M-<down>") 'go-down-10-lines)
 
 ;; Comment/uncomment block
 (global-set-key (kbd "C-c c") 'comment-or-uncomment-region)
@@ -42,8 +52,8 @@
 
 ;; Clever newlines
 (global-set-key (kbd "C-o") 'open-line-and-indent)
-(global-set-key (kbd "C-c C-b") 'open-line-below)
-(global-set-key (kbd "C-c C-a") 'open-line-above)
+(global-set-key (kbd "<C-return>") 'open-line-below)
+(global-set-key (kbd "<C-S-return>") 'open-line-above)
 
 ;; Copy|Delete Lines
 (global-set-key (kbd "C-c k") 'copy-line)
