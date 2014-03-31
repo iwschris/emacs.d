@@ -40,4 +40,9 @@
 (require-package 'multi-term)
 (setq multi-term-program "/usr/bin/zsh")
 
+;; Snippets package and Load snippets table
+(require-package 'yasnippet)
+(require 'yasnippet)
+(yas-reload-all)
+
 (provide '3rd-party)

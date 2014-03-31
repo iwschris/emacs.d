@@ -5,7 +5,8 @@
           (lambda()
             (font-lock-add-keywords nil
                                     '(("\\<\\(FIXME\\|TODO\\|XXX+\\|BUG\\):"
-                                       1 font-lock-warning-face prepend)))))
+                                       1 font-lock-warning-face prepend)))
+            (yas-minor-mode)))
 
 ;; Since Go uses tabs, at least display them as
 ;; 4 columns instead of the default 8
