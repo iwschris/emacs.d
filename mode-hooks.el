@@ -42,14 +42,16 @@
              python-shell-completion-string-code
              "';'.join(get_ipython().Completer.all_completions('''%s'''))\n")
             ;; Define custom commands for inserting
-            ;; pudb & rpdb breakpoints
+            ;; pdb, pudb & rpdb breakpoints
+            (toggle-breakpoint toggle-pdb "import pdb; pdb.set_trace()")
             (toggle-breakpoint toggle-pudb "import pudb; pudb.set_trace()")
             (toggle-breakpoint toggle-rpdb "import rpdb; rpdb.set_trace()")))
 (add-hook 'python-mode-hook
           (lambda ()
             ;; Bind the custom commands to keys - can't be done in same
             ;; lambda as the definitions
-            (define-key python-mode-map (kbd "M-s M-d") 'toggle-pudb)
+            (define-key python-mode-map (kbd "M-s M-d") 'toggle-pdb)
+            (define-key python-mode-map (kbd "M-s M-u") 'toggle-pudb)
             (define-key python-mode-map (kbd "M-s M-r") 'toggle-rpdb)))
 ;; Add Jedi setup
 (add-hook 'python-mode-hook 'jedi:setup)
