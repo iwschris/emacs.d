@@ -28,4 +28,8 @@
                              (:port . 443)
                              (:connection-type . ssl))))
 
+;; Install Multi-term for managing multiple ansi-terms
+(require-package 'multi-term)
+(setq multi-term-program "/usr/bin/zsh")
+
 (provide '3rd-party)

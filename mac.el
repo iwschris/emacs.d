@@ -9,4 +9,7 @@
 ;; Use aspell for spell checking: brew install aspell --lang=en
 (setq ispell-program-name "/usr/local/bin/aspell")
 
+;; Set multiterm to brew installed zsh
+(setq multi-term-program "/usr/local/bin/zsh")
+
 (provide 'mac)

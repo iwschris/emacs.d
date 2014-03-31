@@ -62,4 +62,14 @@
   ;; Bind the custom commands to keys
   '(define-key js-mode-map (kbd "M-s M-d") 'toggle-debugger))
 
+;; Some Multi-Term settings
+(add-hook 'term-mode-hook
+          (lambda ()
+            (setq term-buffer-maximum-size 10000)  ;; Set history to a larger value
+            (add-to-list 'term-bind-key-alist '("M-[" . multi-term-prev))
+            (add-to-list 'term-bind-key-alist '("M-]" . multi-term-next))
+            (define-key term-raw-map (kbd "C-y") 'term-paste)
+            (define-key term-raw-map (kbd "C-c C-j") 'term-line-mode)
+            (define-key term-raw-map (kbd "C-c C-k") 'term-char-mode)))
+
 (provide 'mode-hooks)

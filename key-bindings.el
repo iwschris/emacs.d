@@ -89,8 +89,8 @@
 (global-set-key (kbd "M-g M-l") 'magit-pull)
 (global-set-key (kbd "M-g M-r") 'magit-rebase-step)
 
-;; Ansi Term Emulator
-(global-set-key (kbd "M-s M-t") '(lambda ()(interactive)(ansi-term "/bin/zsh")))
+;; Multi Term Shortcuts
+(global-set-key (kbd "C-c t") 'multi-term)
 
 ;; Aliases
 (defalias 'wm 'whitespace-mode)
