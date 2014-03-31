@@ -143,4 +143,10 @@
 ;; so enabling it will turn it on for all buffers
 (electric-pair-mode t)
 
+;; I do things interactively.
+(setq ido-enable-flex-matching t)
+(setq ido-everywhere t)
+(ido-mode 1)
+(setq ido-use-filename-at-point 'guess)
+
 (provide 'sane-defaults)
