@@ -3,6 +3,13 @@
 (global-flycheck-mode 1)
 (setq flycheck-check-syntax-automatically '(mode-enabled save))
 
+;; Auto-complete
+(require-package 'auto-complete)
+(require 'auto-complete)
+(add-to-list 'ac-dictionary-directories (concat user-emacs-directory "ac-dict"))
+(require 'auto-complete-config)
+(ac-config-default)
+
 ;; Git Stuffis
 (require-package 'magit)
 (require-package 'magit-find-file)
@@ -12,6 +19,7 @@
 (require-package 'go-mode)
 (require-package 'markdown-mode)
 (require-package 'puppet-mode)
+(require-package 'jedi)
 
 ;; Jabber mode
 (require-package 'jabber)

@@ -50,6 +50,8 @@
             ;; lambda as the definitions
             (define-key python-mode-map (kbd "M-s M-d") 'toggle-pudb)
             (define-key python-mode-map (kbd "M-s M-r") 'toggle-rpdb)))
+;; Add Jedi setup
+(add-hook 'python-mode-hook 'jedi:setup)
 
 ;; Javascript mode hooks - Breakpoints
 (add-hook 'javascript-mode-hook

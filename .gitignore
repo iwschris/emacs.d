@@ -1,3 +1,5 @@
+*.dat
+.python-environments
 .places
 .org-id-locations
 elpa
