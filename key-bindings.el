@@ -23,7 +23,7 @@
 ;; Edit file with sudo
 (global-set-key (kbd "M-s e") 'sudo-edit)
 
-;; toggle two most recent buffers
+;; Toggle two most recent buffers
 (fset 'quick-switch-buffer [?\C-x ?b return])
 (global-set-key (kbd "s-b") 'quick-switch-buffer)
 
@@ -41,6 +41,11 @@
 ;; Go up & down 10 lines
 (global-set-key (kbd "M-<up>") 'go-up-10-lines)
 (global-set-key (kbd "M-<down>") 'go-down-10-lines)
+
+;; Create new Frame, vert / horiz windows
+(global-set-key (kbd "<f7>") 'split-window-below)
+(global-set-key (kbd "<f8>") 'split-window-right)
+(global-set-key (kbd "<f9>") 'new-frame)
 
 ;; Comment/uncomment block
 (global-set-key (kbd "C-c c") 'comment-or-uncomment-region)
