@@ -50,7 +50,7 @@
 ;; Comment/uncomment block
 (global-set-key (kbd "C-c c") 'comment-or-uncomment-region)
 (global-set-key (kbd "C-c u") 'uncomment-region)
-(global-set-key (kbd "C-c ,") 'toggle-comment-on-line)
+(global-set-key (kbd "C-c C-,") 'toggle-comment-on-line)
 
 ;; Eval buffer
 (global-set-key (kbd "C-c C-k") 'eval-buffer)
