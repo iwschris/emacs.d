@@ -75,4 +75,5 @@
             (if (equal current-line ,dstr)
                 (kill-whole-line)
               (progn (open-line-above)
-                     (insert ,dstr)))))))
+                     (insert ,dstr)))
+            (save-buffer)))))
