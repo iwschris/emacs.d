@@ -42,6 +42,9 @@
 (global-set-key (kbd "M-<up>") 'go-up-10-lines)
 (global-set-key (kbd "M-<down>") 'go-down-10-lines)
 
+;; Goto last change
+(global-set-key (kbd "C-x C-/") 'goto-last-change)
+
 ;; Create new Frame, vert / horiz windows
 (global-set-key (kbd "<f7>") 'split-window-below)
 (global-set-key (kbd "<f8>") 'split-window-right)

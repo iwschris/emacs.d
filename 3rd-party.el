@@ -45,4 +45,7 @@
 (require 'yasnippet)
 (yas-reload-all)
 
+;; Add goto-last-change
+(require-package 'goto-last-change)
+
 (provide '3rd-party)
