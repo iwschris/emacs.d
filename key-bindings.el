@@ -77,7 +77,7 @@
 (global-set-key (kbd "<f4>") 'org-mobile-push)
 
 ;; Hippie Expand
-(global-set-key (kbd "C-c e") 'hippie-expand)
+(global-set-key (kbd "s-/") 'hippie-expand)
 
 ;; Speedbar Shortcuts
 (global-set-key (kbd "M-s M-b") 'speedbar)
