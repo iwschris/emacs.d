@@ -6,7 +6,8 @@
             (font-lock-add-keywords nil
                                     '(("\\<\\(FIXME\\|TODO\\|XXX+\\|BUG\\):"
                                        1 font-lock-warning-face prepend)))
-            (yas-minor-mode)))
+            (yas-minor-mode)
+            (autopair-mode)))
 
 ;; Since Go uses tabs, at least display them as
 ;; 4 columns instead of the default 8
@@ -16,14 +17,12 @@
             (setq tab-width 4)
             (setq indent-tabs-mode t)))
 
-;; Update Indents for Web-mode
+;; Turn Auto-complete on & autopair off
+;; since web-mode has its own
 (add-hook 'web-mode-hook
           (function (lambda ()
-                      (setq web-mode-markup-indent-offset 4)
-                      (setq web-mode-css-indent-offset 4)
-                      (setq web-mode-style-padding 4)
-                      (setq web-mode-code-indent-offset 4)
-                      (setq web-mode-script-padding 4))))
+                      (auto-complete-mode t)
+                      (autopair-mode -1))))
 
 ;; Update Indents for Puppet
 (add-hook 'puppet-mode-hook

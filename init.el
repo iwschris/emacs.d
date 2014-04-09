@@ -59,6 +59,7 @@
 (eval-after-load 'erc '(require 'setup-erc))
 (eval-after-load 'org '(require 'setup-org))
 (eval-after-load 'tramp '(require 'setup-tramp))
+(eval-after-load 'web-mode '(require 'setup-web-mode))
 
 ;; Map files to modes
 (require 'mode-mappings)

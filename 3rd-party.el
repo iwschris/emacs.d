@@ -52,4 +52,7 @@
 ;; Include The Silver Searcher
 (require-package 'ag)
 
+;; Use Autopairing like TextMate
+(require-package 'autopair)
+
 (provide '3rd-party)
