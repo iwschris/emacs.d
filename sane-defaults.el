@@ -143,6 +143,10 @@
 ;; so enabling it will turn it on for all buffers
 (electric-pair-mode t)
 
+;; Turn on autoindenting. Electric-indent-mode is a global mode,
+;; so enabling it will turn it on for all buffers
+(electric-indent-mode t)
+
 ;; I do things interactively.
 (setq ido-enable-flex-matching t)
 (setq ido-everywhere t)

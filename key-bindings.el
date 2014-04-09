@@ -100,6 +100,9 @@
 ;; Multi Term Shortcuts
 (global-set-key (kbd "C-c t") 'multi-term)
 
+;; Run Silver Searcher
+(global-set-key (kbd "C-c M-a") 'ag)
+
 ;; Aliases
 (defalias 'wm 'whitespace-mode)
 (defalias 'rs 'replace-string)

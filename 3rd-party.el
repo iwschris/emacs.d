@@ -20,6 +20,7 @@
 (require-package 'markdown-mode)
 (require-package 'puppet-mode)
 (require-package 'jedi)
+(require-package 'web-mode)
 
 ;; Jabber mode
 (require-package 'jabber)
@@ -47,5 +48,8 @@
 
 ;; Add goto-last-change
 (require-package 'goto-last-change)
+
+;; Include The Silver Searcher
+(require-package 'ag)
 
 (provide '3rd-party)

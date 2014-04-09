@@ -16,10 +16,14 @@
             (setq tab-width 4)
             (setq indent-tabs-mode t)))
 
-;; Update Indents for HTML
-(add-hook 'html-mode-hook
+;; Update Indents for Web-mode
+(add-hook 'web-mode-hook
           (function (lambda ()
-                      (setq sgml-basic-offset 4))))
+                      (setq web-mode-markup-indent-offset 4)
+                      (setq web-mode-css-indent-offset 4)
+                      (setq web-mode-style-padding 4)
+                      (setq web-mode-code-indent-offset 4)
+                      (setq web-mode-script-padding 4))))
 
 ;; Update Indents for Puppet
 (add-hook 'puppet-mode-hook
