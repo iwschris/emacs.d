@@ -27,7 +27,11 @@
 (fset 'quick-switch-buffer [?\C-x ?b return])
 (global-set-key (kbd "s-b") 'quick-switch-buffer)
 
+;; Hide buffer
 (global-set-key (kbd "s-y") 'bury-buffer)
+
+;; Kill & Delete shortcut (shorter than C-x 4 0)
+(global-set-key (kbd "H-k") 'kill-buffer-and-window)
 
 ;; Window switching
 (global-set-key (kbd "C-c r") 'rotate-windows)
