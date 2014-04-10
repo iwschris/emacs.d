@@ -101,7 +101,7 @@
 (global-set-key (kbd "C-c t") 'multi-term)
 
 ;; Run Silver Searcher
-(global-set-key (kbd "C-c M-a") 'ag)
+(global-set-key (kbd "M-s M-s") 'ag)
 
 ;; Aliases
 (defalias 'wm 'whitespace-mode)
