@@ -54,6 +54,10 @@
 (global-set-key (kbd "<f8>") 'split-window-right)
 (global-set-key (kbd "<f9>") 'new-frame)
 
+;; Delete window & other windows (quicker)
+(global-set-key (kbd "s-0") 'delete-window)
+(global-set-key (kbd "s-1") 'delete-other-windows)
+
 ;; Comment/uncomment block
 (global-set-key (kbd "C-c c") 'comment-or-uncomment-region)
 (global-set-key (kbd "C-c u") 'uncomment-region)
