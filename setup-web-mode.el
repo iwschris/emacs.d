@@ -1,6 +1,6 @@
-;; Set web-mode engine overrides - I use Django the most, so default .html with that
+;; Set web-mode engines per project
 (setq web-mode-engines-alist
-      '(("django"  . "\\.html\\'")))
+      '(("mako"  . "/\\(work\\|britecore\\)/templates/.*\\.html\\'")))
 
 ;; Set custom indent & padding
 (setq web-mode-markup-indent-offset 4)
