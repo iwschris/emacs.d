@@ -111,6 +111,9 @@
 ;; Run Silver Searcher
 (global-set-key (kbd "M-s M-s") 'ag)
 
+;; Run Calc
+(global-set-key (kbd "M-s M-c") 'calc)
+
 ;; Aliases
 (defalias 'wm 'whitespace-mode)
 (defalias 'rs 'replace-string)
