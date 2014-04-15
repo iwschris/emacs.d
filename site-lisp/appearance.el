@@ -46,4 +46,8 @@
     (add-to-list 'default-frame-alist
                  '(font . "Inconsolata-13")))
 
+;; Don't let line numbers be italicized
+(require 'linum)
+(set-face-attribute 'linum nil :italic nil)
+
 (provide 'appearance)
