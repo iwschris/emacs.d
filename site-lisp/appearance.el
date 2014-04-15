@@ -14,7 +14,6 @@
 
 ;; Set Solarized color theme
 (require-package 'color-theme-solarized)
-(setq solarized-broken-srgb 'nil)
 (load-theme 'solarized-dark t)
 
 ;; Color customizations
@@ -34,11 +33,10 @@
 ;; org-mode colors
 (setq org-todo-keyword-faces
       '(
-        ("TODO" . org-todo-kwd-face)
-        ("STARTED" . org-started-kwd-face)
-        ("WAITING" . org-waiting-kwd-face)
-        ("SOMEDAY" . org-someday-kwd-face)
-        ("DONE" . org-done-kwd-face)
+        ("TODO" . font-lock-negation-char-face)
+        ("STARTED" . font-lock-type-face)
+        ("WAITING" . font-lock-string-face)
+        ("SOMEDAY" . font-lock-variable-name-face)
         ))
 
 ;; Set Font for all frames -- http://levien.com/type/myfonts/inconsolata.html

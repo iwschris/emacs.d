@@ -1,10 +1,6 @@
 ;; New List buffers - ibuffer
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
-;; Search
-(global-set-key (kbd "C-s") 'isearch-forward-regexp)
-(global-set-key (kbd "C-r") 'isearch-backward-regexp)
-
 ;; Perform general cleanup.
 (global-set-key (kbd "C-c w") 'toggle-show-trailing-whitespace)
 (global-set-key (kbd "C-c n") 'cleanup-buffer)
@@ -30,9 +26,6 @@
 ;; Hide buffer
 (global-set-key (kbd "s-y") 'bury-buffer)
 
-;; Kill & Delete shortcut (shorter than C-x 4 0)
-(global-set-key (kbd "H-k") 'kill-buffer-and-window)
-
 ;; Window switching
 (global-set-key (kbd "C-c r") 'rotate-windows)
 
@@ -52,7 +45,7 @@
 ;; Create new Frame, vert / horiz windows
 (global-set-key (kbd "<f7>") 'split-window-below)
 (global-set-key (kbd "<f8>") 'split-window-right)
-(global-set-key (kbd "<f9>") 'new-frame)
+(global-set-key (kbd "<f9>") 'make-frame)
 
 ;; Delete window & other windows (quicker)
 (global-set-key (kbd "s-0") 'delete-window)
@@ -111,8 +104,19 @@
 ;; Run Silver Searcher
 (global-set-key (kbd "M-s M-s") 'ag)
 
+;; HYPER ZONE!
+
+;; Open bookmark list
+(global-set-key (kbd "H-b") 'bookmark-bmenu-list)
+
 ;; Run Calc
-(global-set-key (kbd "M-s M-c") 'calc)
+(global-set-key (kbd "H-c") 'calc)
+
+;; List all Flycheck errors
+(global-set-key (kbd "H-e") 'flycheck-list-errors)
+
+;; Kill & Delete shortcut (shorter than C-x 4 0)
+(global-set-key (kbd "H-k") 'kill-buffer-and-window)
 
 ;; Aliases
 (defalias 'wm 'whitespace-mode)
