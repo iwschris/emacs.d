@@ -72,9 +72,6 @@
 ;; Never insert tabs
 (set-default 'indent-tabs-mode nil)
 
-;; Easily navigate sillycased words
-(global-subword-mode 1)
-
 ;; Don't break lines for me, please
 (setq-default truncate-lines t)
 

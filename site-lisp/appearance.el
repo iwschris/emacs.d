@@ -37,6 +37,7 @@
         ("STARTED" . font-lock-type-face)
         ("WAITING" . font-lock-string-face)
         ("SOMEDAY" . font-lock-variable-name-face)
+        ("DONE" . font-lock-keyword-face)
         ))
 
 ;; Set Font for all frames -- http://levien.com/type/myfonts/inconsolata.html
