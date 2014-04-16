@@ -23,8 +23,7 @@
 ;; since web-mode has its own
 (add-hook 'web-mode-hook
           (function (lambda ()
-                      (auto-complete-mode t)
-                      (autopair-mode -1))))
+                      (auto-complete-mode t))))
 
 ;; Update Indents for Puppet
 (add-hook 'puppet-mode-hook
