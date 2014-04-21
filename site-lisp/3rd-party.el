@@ -25,6 +25,7 @@
 ;; Jabber mode
 (require-package 'jabber)
 (setq jabber-roster-show-title nil)
+(setq fsm-debug nil)
 (setq jabber-roster-line-format " %c %-25n %u %-8s (%r)")
 (setq jabber-alert-presence-message-function (lambda (who oldstatus newstatus statustext) nil))
 (setq jabber-account-list '(("hayden767@gmail.com"
