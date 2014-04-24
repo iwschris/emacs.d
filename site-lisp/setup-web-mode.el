@@ -9,9 +9,6 @@
 (setq web-mode-code-indent-offset 4)
 (setq web-mode-script-padding 4)
 
-;; Turn off web-mode's autopair in favor of global electric pairing
-(setq web-mode-enable-auto-pairing nil)
-
 ;; Set some custom face attributes
 (set-face-attribute 'web-mode-html-tag-face nil :foreground (find-color 'blue))
 (set-face-attribute 'web-mode-doctype-face nil :foreground (find-color 'base01))

@@ -19,11 +19,12 @@
             (setq tab-width 4)
             (setq indent-tabs-mode t)))
 
-;; Turn Auto-complete on & autopair off
+;; Turn Auto-complete on & electric pair off
 ;; since web-mode has its own
 (add-hook 'web-mode-hook
           (function (lambda ()
-                      (auto-complete-mode t))))
+                      (auto-complete-mode t)
+                      (set (make-local-variable 'electric-pair-mode) nil))))
 
 ;; Update Indents for Puppet
 (add-hook 'puppet-mode-hook
