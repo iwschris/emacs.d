@@ -26,6 +26,11 @@
                       (auto-complete-mode t)
                       (set (make-local-variable 'electric-pair-mode) nil))))
 
+;; Turn electric pair off in ERC
+(add-hook 'erc-mode-hook
+          (function (lambda ()
+                      (set (make-local-variable 'electric-pair-mode) nil))))
+
 ;; Update Indents for Puppet
 (add-hook 'puppet-mode-hook
           (function (lambda ()
