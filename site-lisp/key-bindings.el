@@ -118,9 +118,13 @@
 ;; Kill & Delete shortcut (shorter than C-x 4 0)
 (global-set-key (kbd "H-k") 'kill-buffer-and-window)
 
-;; Aliases
-(defalias 'wm 'whitespace-mode)
-(defalias 'rs 'replace-string)
-(defalias 'll 'goto-line)
+;; Go to line
+(global-set-key (kbd "H-l") 'goto-line)
+
+;; Replace string
+(global-set-key (kbd "H-r") 'replace-string)
+
+;; Toggle Whitspace Mode
+(global-set-key (kbd "H-w") 'whitespace-mode)
 
 (provide 'key-bindings)
