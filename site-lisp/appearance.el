@@ -47,8 +47,9 @@
     (add-to-list 'default-frame-alist
                  '(font . "Inconsolata-13")))
 
-;; Don't let line numbers be italicized
+;; Don't let line numbers be italicized or struck through
 (require 'linum)
 (set-face-attribute 'linum nil :italic nil)
+(set-face-attribute 'linum nil :strike-through nil)
 
 (provide 'appearance)
