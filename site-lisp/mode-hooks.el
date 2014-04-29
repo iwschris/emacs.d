@@ -87,4 +87,18 @@
             (define-key term-raw-map (kbd "C-c C-j") 'term-line-mode)
             (define-key term-raw-map (kbd "C-c C-k") 'term-char-mode)))
 
+;; Org-mode specific
+(add-hook 'org-mode-hook
+          (lambda ()
+            (org-set-state org-set-todo "TODO")
+            (org-set-state org-set-started "STARTED")
+            (org-set-state org-set-waiting "WAITING")
+            (org-set-state org-set-someday "SOMEDAY")
+            (org-set-state org-set-done "DONE")
+            (local-set-key (kbd "H-t") 'org-set-todo)
+            (local-set-key (kbd "H-s") 'org-set-started)
+            (local-set-key (kbd "H-w") 'org-set-waiting)
+            (local-set-key (kbd "H-y") 'org-set-someday)
+            (local-set-key (kbd "H-d") 'org-set-done)))
+
 (provide 'mode-hooks)

@@ -30,3 +30,10 @@ e.g. 09-17-2000."
   "Insert a signature & date. Ex. -- Ben Hayden 09/17/2000."
   (interactive)
   (insert (concat " -- Ben Hayden " (format-time-string "%m-%d-%Y"))))
+
+(defmacro org-set-state (command state)
+  "Creates interactive command `command', for setting org mode states."
+  (fset command
+        `(lambda ()
+           (interactive)
+           (org-todo ,state))))
