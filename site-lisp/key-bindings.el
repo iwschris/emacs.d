@@ -97,6 +97,7 @@
 (global-set-key (kbd "M-g M-p") 'magit-push)
 (global-set-key (kbd "M-g M-l") 'magit-pull)
 (global-set-key (kbd "M-g M-r") 'magit-rebase-step)
+(global-set-key (kbd "M-g M-m") 'magit-blame-mode)
 
 ;; Multi Term Shortcuts
 (global-set-key (kbd "C-c t") 'multi-term)
