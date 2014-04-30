@@ -31,6 +31,11 @@
           (function (lambda ()
                       (set (make-local-variable 'electric-pair-mode) nil))))
 
+;; Turn electric pair off in Jabber
+(add-hook 'jabber-chat-mode-hook
+          (function (lambda ()
+                      (set (make-local-variable 'electric-pair-mode) nil))))
+
 ;; Update Indents for Puppet
 (add-hook 'puppet-mode-hook
           (function (lambda ()
