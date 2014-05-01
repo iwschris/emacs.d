@@ -105,6 +105,7 @@
             (local-set-key (kbd "H-s") 'org-set-started)
             (local-set-key (kbd "H-w") 'org-set-waiting)
             (local-set-key (kbd "H-y") 'org-set-someday)
-            (local-set-key (kbd "H-d") 'org-set-done)))
+            (local-set-key (kbd "H-d") 'org-set-done)
+            (local-set-key (kbd "H-a") 'org-archive-subtree)))
 
 (provide 'mode-hooks)
