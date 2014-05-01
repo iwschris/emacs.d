@@ -29,7 +29,8 @@
 ;; Turn electric pair off in ERC
 (add-hook 'erc-mode-hook
           (function (lambda ()
-                      (set (make-local-variable 'electric-pair-mode) nil))))
+                      (set (make-local-variable 'electric-pair-mode) nil)
+                      (set-face-attribute 'erc-button nil :inherit 'link))))
 
 ;; Turn electric pair off in Jabber
 (add-hook 'jabber-chat-mode-hook
