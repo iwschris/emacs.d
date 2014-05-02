@@ -27,16 +27,11 @@
 (setq fsm-debug nil)
 (setq jabber-roster-line-format " %c %-25n %u %-8s (%r)")
 (setq jabber-alert-presence-message-function (lambda (who oldstatus newstatus statustext) nil))
-(setq jabber-account-list '(("hayden767@gmail.com"
-                             ;;   (:password . nil)
-                             (:network-server . "talk.google.com")
-                             (:port . 443)
-                             (:connection-type . ssl))
-                            ("ben@britecore.com"
-                             ;;   (:password . nil)
-                             (:network-server . "talk.google.com")
-                             (:port . 443)
-                             (:connection-type . ssl))))
+(setq jabber-account-list '("chris@britecore.com"
+                            ;;   (:password . nil)
+                            (:network-server . "talk.google.com")
+                            (:port . 443)
+                            (:connection-type . ssl)))
 
 ;; Install Multi-term for managing multiple ansi-terms
 (require-package 'multi-term)
