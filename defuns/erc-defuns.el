@@ -14,8 +14,8 @@
                               (erc :server ,server :port ,port :nick ,nick :password ,pass))))))
 
 ;; Create ERC command to connect to IWS & Freenode servers
-(asf-erc-bouncer-connect erc-iws "107.20.193.74" 6667 "Ben" nil nil)
-(asf-erc-bouncer-connect erc-freenode "irc.freenode.net" 6667 "beardedprojamz" nil nil)
+(asf-erc-bouncer-connect erc-iws "107.20.193.74" 6667 "Chris" nil nil)
+(asf-erc-bouncer-connect erc-freenode "irc.freenode.net" 6667 "iwschris" nil nil)
 
 (defmacro erc-autojoin (&rest args)
     `(add-hook 'erc-after-connect

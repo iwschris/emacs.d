@@ -27,9 +27,9 @@ e.g. 09-17-2000."
   (insert (format-time-string "%m-%d-%Y")))
 
 (defun sign-and-date ()
-  "Insert a signature & date. Ex. -- Ben Hayden 09/17/2000."
+  "Insert a signature & date. Ex. -- Chris Reynolds 09/17/2000."
   (interactive)
-  (insert (concat " -- Ben Hayden " (format-time-string "%m-%d-%Y"))))
+  (insert (concat " -- Chris Reynolds " (format-time-string "%m-%d-%Y"))))
 
 (defmacro org-set-state (command state)
   "Creates interactive command `command', for setting org mode states."
