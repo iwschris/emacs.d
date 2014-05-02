@@ -44,7 +44,7 @@
 ;; Set Font for all frames -- http://levien.com/type/myfonts/inconsolata.html
 (if is-mac
     (add-to-list 'default-frame-alist
-                 '(font . "Inconsolata-16"))  ; Mac has higher resolution than my Linux box
+                 '(font . "Inconsolata-11"))  ; Mac has higher resolution than my Linux box
     (add-to-list 'default-frame-alist
                  '(font . "Inconsolata-13")))
 

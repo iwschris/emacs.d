@@ -1,3 +1,11 @@
+;;; key-bindings.el --- Defines custom key bindings
+
+;;; Commentary:
+;;
+;; This is where you define custom key bindings
+
+;;; Code:
+
 ;; New List buffers - ibuffer
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 

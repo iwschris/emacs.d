@@ -1,3 +1,12 @@
+;;; init.el --- Defines custom emacs settings
+
+;;; Commentary:
+;;
+;; This is the gateway to the entire custom emacs ecosystem
+
+;;; Code:
+
+
 ;; Turn off tool|scroll interface early in startup to avoid momentary display
 (unless (window-system)
   (if (fboundp 'menu-bar-mode) (menu-bar-mode -1)))
