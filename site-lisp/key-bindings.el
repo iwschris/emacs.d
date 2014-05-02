@@ -119,6 +119,10 @@
 (global-set-key (kbd "M-`") 'other-frame)
 (global-set-key (kbd "s-`") 'tmm-menubar)
 
+;; Toggle Through Buffers
+(global-set-key (kbd "M-}") 'next-buffer)
+(global-set-key (kbd "M-{") 'previous-buffer)
+
 ;; HYPER ZONE!
 
 ;; Open bookmark list
@@ -143,5 +147,9 @@
 
 ;; Toggle Whitspace Mode
 (global-set-key (kbd "H-w") 'whitespace-mode)
+
+;; Hyper file mappings
+(global-set-key (kbd "H-f t") (lambda() (interactive)(find-file "~/Google Drive/org/tasks.org")))
+(global-set-key (kbd "H-f k") (lambda() (interactive)(find-file "~/.emacs.d/site-lisp/key-bindings.el")))
 
 (provide 'key-bindings)

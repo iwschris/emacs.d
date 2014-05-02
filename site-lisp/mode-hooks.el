@@ -144,6 +144,8 @@
             (local-set-key (kbd "H-w") 'org-set-waiting)
             (local-set-key (kbd "H-y") 'org-set-someday)
             (local-set-key (kbd "H-d") 'org-set-done)
-            (local-set-key (kbd "H-a") 'org-archive-subtree)))
+            (local-set-key (kbd "H-a") 'org-archive-subtree)
+            (local-set-key (kbd "M-}") 'next-buffer)
+            (local-set-key (kbd "M-{") 'previous-buffer)))
 
 (provide 'mode-hooks)
