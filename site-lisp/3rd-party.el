@@ -17,6 +17,7 @@
 ;; Extra Language Modes
 (require-package 'coffee-mode)
 (require-package 'go-mode)
+(setenv "GOPATH" (concat (getenv "HOME") "/Documents/go-zone"))
 (require-package 'markdown-mode)
 (require-package 'puppet-mode)
 (require-package 'jedi)
