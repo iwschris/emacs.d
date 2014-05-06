@@ -123,6 +123,23 @@
 (global-set-key (kbd "M-}") 'next-buffer)
 (global-set-key (kbd "M-{") 'previous-buffer)
 
+;; Remap M-x to H-x
+(global-set-key (kbd "H-x") 'execute-extended-command)
+
+;; Remap copy, cut, paste
+(global-set-key (kbd "M-x") 'kill-region)
+(global-set-key (kbd "M-c") 'kill-ring-save)
+(global-set-key (kbd "M-v") 'yank)
+
+;; Traditional save
+(global-set-key (kbd "M-s") 'save-buffer)
+
+;; Traditional quit
+(global-set-key (kbd "M-q") 'save-buffers-kill-terminal)
+
+;; Traditional open
+(global-set-key (kbd "M-o") 'ido-find-file)
+
 ;; HYPER ZONE!
 
 ;; Open bookmark list
