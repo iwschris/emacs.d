@@ -20,8 +20,7 @@
           (lambda ()
             (setq-default)
             (setq tab-width 4)
-            (setq indent-tabs-mode t)
-            (define-key go-mode-map (kbd "s-i") 'go-remove-unused-imports)))
+            (setq indent-tabs-mode t)))
 
 ;; Turn Auto-complete on & electric pair off
 ;; since web-mode has its own

@@ -18,6 +18,9 @@
 (require-package 'coffee-mode)
 (require-package 'go-mode)
 (setenv "GOPATH" (concat (getenv "HOME") "/Documents/go-zone"))
+(when (file-exists-p (concat (getenv "GOPATH") "/bin/goimports"))
+  ;; If goimports exists, set gofmt-command to it
+  (setq gofmt-command "goimports"))
 (require-package 'markdown-mode)
 (require-package 'puppet-mode)
 (require-package 'jedi)
