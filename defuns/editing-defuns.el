@@ -35,26 +35,23 @@
                       (line-beginning-position (+ 1 arg)))
       (message "%d line%s copied" arg (if (= 1 arg) "" "s")))
 
-(defun replace-next-underscore-with-camel (arg)
-  (interactive "p")
-  (if (> arg 0)
-      (setq arg (1+ arg))) ; 1-based index to get eternal loop with 0
-  (let ((case-fold-search nil))
-    (while (not (= arg 1))
-      (search-forward-regexp "\\b_[a-z]")
-      (forward-char -2)
-      (delete-char 1)
-      (capitalize-word 1)
-      (setq arg (1- arg)))))
+(defmacro case-macro (command fxn)
+  "Creates interactive command `command', for converting words
+to different cases."
+  (fset command
+        `(lambda ()
+           (interactive)
+           (mark-word)
+           (let* ((beg (region-beginning))
+                  (end (region-end))
+                  (current-word (buffer-substring-no-properties beg end))
+                  (cameled (,fxn current-word)))
+             (replace-string current-word cameled nil beg end)))))
 
-(defun snakeify-current-word ()
-  (interactive)
-  (mark-word)
-  (let* ((beg (region-beginning))
-         (end (region-end))
-         (current-word (buffer-substring-no-properties beg end))
-         (snakified (s-snake-case current-word)))
-    (replace-string current-word snakified nil beg end)))
+(case-macro lower-camel-word s-lower-camel-case)
+(case-macro upper-camel-word s-upper-camel-case)
+(case-macro snakeify-word s-snake-case)
+(case-macro dashify-word s-dashed-words)
 
 (defun toggle-comment-on-line ()
   "comment or uncomment current line"

@@ -3,13 +3,6 @@
 (global-flycheck-mode 1)
 (setq flycheck-check-syntax-automatically '(mode-enabled save))
 
-;; Auto-complete
-(require-package 'auto-complete)
-(require 'auto-complete)
-(add-to-list 'ac-dictionary-directories (concat user-emacs-directory "ac-dict"))
-(require 'auto-complete-config)
-(ac-config-default)
-
 ;; Git Stuffis
 (require-package 'magit)
 (require-package 'magit-find-file)
@@ -21,6 +14,7 @@
 (when (file-exists-p (concat (getenv "GOPATH") "/bin/goimports"))
   ;; If goimports exists, set gofmt-command to it
   (setq gofmt-command "goimports"))
+(require 'go-autocomplete)
 (require-package 'markdown-mode)
 (require-package 'puppet-mode)
 (require-package 'jedi)
@@ -57,5 +51,12 @@
 
 ;; Include The Silver Searcher
 (require-package 'ag)
+
+;; Auto-complete
+(require-package 'auto-complete)
+(require 'auto-complete)
+(add-to-list 'ac-dictionary-directories (concat user-emacs-directory "ac-dict"))
+(require 'auto-complete-config)
+(ac-config-default)
 
 (provide '3rd-party)

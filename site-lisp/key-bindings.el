@@ -12,9 +12,11 @@
 (define-key key-translation-map [?\C-h] [?\C-?])
 (global-set-key (kbd "<f1>") 'help-command)
 
-;; Change next underscore with a camel case
-(global-set-key (kbd "C-c C--") 'replace-next-underscore-with-camel)
-(global-set-key (kbd "M-s M--") 'snakeify-current-word)
+;; Change next underscore with a camel case - ExampleWord
+(global-set-key (kbd "M-s c l") 'lower-camel-word)
+(global-set-key (kbd "M-s c u") 'upper-camel-word)
+(global-set-key (kbd "M-s c s") 'snakeify-word)
+(global-set-key (kbd "M-s c d") 'dashify-word)
 
 ;; Edit file with sudo
 (global-set-key (kbd "M-s e") 'sudo-edit)
