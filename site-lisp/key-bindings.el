@@ -151,11 +151,6 @@
 ;; Run Calc
 (global-set-key (kbd "H-c") 'calc)
 
-;; List all Flycheck errors
-(global-set-key (kbd "H-e") 'flycheck-list-errors)
-;; Run Flycheck
-(global-set-key (kbd "H-f") 'flycheck-buffer)
-
 ;; Kill & Delete shortcut (shorter than C-x 4 0)
 (global-set-key (kbd "H-k") 'kill-buffer-and-window)
 
