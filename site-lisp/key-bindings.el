@@ -140,6 +140,9 @@
 ;; Traditional open
 (global-set-key (kbd "M-o") 'ido-find-file)
 
+;; Remap kill buffer
+(global-set-key (kbd "M-w") 'ido-kill-buffer)
+
 ;; HYPER ZONE!
 
 ;; Open bookmark list
