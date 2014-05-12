@@ -150,4 +150,9 @@
 (ido-mode 1)
 (setq ido-use-filename-at-point nil)
 
+;; Turn on Dired Extra to omit files
+(require 'dired-x)
+(setq-default dired-omit-files-p t)
+(setq dired-omit-files "\\.pyc$\\|\\.pdf$\\|\\.tex$")
+
 (provide 'sane-defaults)
