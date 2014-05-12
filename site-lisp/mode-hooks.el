@@ -40,7 +40,7 @@
 (add-hook 'jabber-chat-mode-hook
           (function (lambda ()
                       (set (make-local-variable 'electric-pair-mode) nil)
-                      (set-face-attribute 'jabber-rare-time-face nil :foreground (find-color 'yellow)))))
+                      (set-face-attribute 'jabber-rare-time-face nil :foreground (find-color 'base01)))))
 
 ;; Update Indents for Puppet
 (add-hook 'puppet-mode-hook
