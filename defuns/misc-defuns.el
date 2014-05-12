@@ -37,3 +37,9 @@ e.g. 09-17-2000."
         `(lambda ()
            (interactive)
            (org-todo ,state))))
+
+(defun chatters ()
+  "Start up all communication platforms"
+  (interactive)
+  (erc-iws 1)
+  (jabber-connect-all))
