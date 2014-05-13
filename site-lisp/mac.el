@@ -22,4 +22,8 @@
 (global-set-key (kbd "M-`") 'other-frame)
 (global-set-key (kbd "s-`") 'tmm-menubar)
 
+;; Quit Emacs
+(global-set-key (kbd "M-q") 'save-buffers-kill-emacs)
+(global-set-key (kbd "s-q") 'fill-paragraph)
+
 (provide 'mac)
