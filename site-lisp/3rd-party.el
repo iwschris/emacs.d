@@ -59,4 +59,7 @@
 (require 'auto-complete-config)
 (ac-config-default)
 
+;; Install wrap-region for wrapping words in quotes
+(require-package 'wrap-region)
+
 (provide '3rd-party)

@@ -9,6 +9,7 @@
             (font-lock-add-keywords nil
                                     '(("\\<\\(FIXME\\|TODO\\|XXX+\\|BUG\\):"
                                        1 font-lock-warning-face prepend)))
+            (wrap-region-mode)
             (yas-minor-mode)
             (if (fboundp 'superword-mode)
                 (superword-mode)  ;; Superword is Emacs 24.4 and up...
