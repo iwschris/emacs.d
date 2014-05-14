@@ -21,7 +21,9 @@
             (setq-default)
             (setq tab-width 4)
             (setq indent-tabs-mode t)
-            (define-key go-mode-map (kbd "s-d") 'godoc)))
+            (define-key go-mode-map (kbd "s-d") 'godoc)
+            (define-key go-mode-map (kbd "s-j") 'godef-jump)
+            (define-key go-mode-map (kbd "s-i") 'godef-describe)))
 
 ;; Turn Auto-complete on & electric pair off
 ;; since web-mode has its own
