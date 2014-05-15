@@ -102,9 +102,7 @@
           (lambda ()
             ;; Bind the custom commands to keys - can't be done in same
             ;; lambda as the definitions
-            (define-key python-mode-map (kbd "M-s M-d") 'toggle-pdb)
-            (define-key python-mode-map (kbd "s-p") 'toggle-pudb)
-            (define-key python-mode-map (kbd "M-s M-r") 'toggle-rpdb)))
+            (define-key python-mode-map (kbd "s-p") 'toggle-pudb)))
 ;; Add Jedi setup
 (add-hook 'python-mode-hook 'jedi:setup)
 

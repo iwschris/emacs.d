@@ -81,6 +81,9 @@
 ;; Show trailing whitespace on files
 (add-hook 'after-change-major-mode-hook 'show-ws-and-linum-on-files)
 
+;; Remove trailing whitespace and compact whitespace on save
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
 ;; Bring in 3rd Party packages
 (require '3rd-party)
 
