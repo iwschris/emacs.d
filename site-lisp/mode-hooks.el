@@ -98,6 +98,7 @@
             (add-to-list 'term-bind-key-alist '("M-[" . multi-term-prev))
             (add-to-list 'term-bind-key-alist '("M-]" . multi-term-next))
             (define-key term-raw-map (kbd "C-y") 'term-paste)
+            (define-key term-raw-map (kbd "M-v") 'term-paste)
             (define-key term-raw-map (kbd "C-c C-j") 'term-line-mode)
             (define-key term-raw-map (kbd "C-c C-k") 'term-char-mode)))
 
