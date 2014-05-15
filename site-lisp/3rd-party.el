@@ -22,6 +22,7 @@
 ;; Jabber mode
 (require-package 'jabber)
 (setq jabber-roster-show-title nil)
+(setq jabber-auto-reconnect t)
 (setq fsm-debug nil)
 (setq jabber-roster-line-format " %c %-25n %u %-8s (%r)")
 (setq jabber-alert-presence-message-function (lambda (who oldstatus newstatus statustext) nil))
