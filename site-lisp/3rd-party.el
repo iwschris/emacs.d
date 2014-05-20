@@ -39,7 +39,7 @@
 
 ;; Install Multi-term for managing multiple ansi-terms
 (require-package 'multi-term)
-(setq multi-term-program "/usr/bin/zsh")
+(setq multi-term-program "/bin/zsh")
 
 ;; Snippets package and Load snippets table
 (require-package 'yasnippet)
@@ -51,6 +51,9 @@
 
 ;; Include The Silver Searcher
 (require-package 'ag)
+
+;; Señor Speedbar (same frame speedbar)
+(require-package 'sr-speedbar)
 
 ;; Auto-complete
 (require-package 'auto-complete)

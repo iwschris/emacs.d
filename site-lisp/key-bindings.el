@@ -82,9 +82,8 @@
 ;; Hippie Expand
 (global-set-key (kbd "s-/") 'hippie-expand)
 
-;; Speedbar Shortcuts
-(global-set-key (kbd "M-s M-b") 'speedbar)
-(global-set-key (kbd "M-s M-f") 'speedbar-get-focus)
+;; Sr. Speedbar Shortcut
+(global-set-key (kbd "M-s M-b") 'sr-speedbar-toggle)
 
 ;; Sign & Date
 (global-set-key (kbd "C-c s") 'sign-and-date)
@@ -107,6 +106,10 @@
 ;; Run Silver Searcher
 (global-set-key (kbd "M-s M-s") 'ag)
 (global-set-key (kbd "M-s C-d") 'ag-dired)
+
+;; Flip other frame
+(global-set-key (kbd "M-`") 'other-frame)
+(global-set-key (kbd "s-`") 'tmm-menubar)
 
 ;; HYPER ZONE!
 

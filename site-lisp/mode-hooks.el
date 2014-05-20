@@ -100,7 +100,8 @@
             (define-key term-raw-map (kbd "C-y") 'term-paste)
             (define-key term-raw-map (kbd "M-v") 'term-paste)
             (define-key term-raw-map (kbd "C-c C-j") 'term-line-mode)
-            (define-key term-raw-map (kbd "C-c C-k") 'term-char-mode)))
+            (define-key term-raw-map (kbd "C-c C-k") 'term-char-mode)
+            (define-key term-raw-map (kbd "<M-down-mouse-1>") 'browse-url-at-mouse)))
 
 ;; Org-mode specific
 (add-hook 'org-mode-hook
