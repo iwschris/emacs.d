@@ -14,6 +14,7 @@
 
 ;; Set Solarized color theme
 (require-package 'color-theme-solarized)
+(setq solarized-contrast 'high)
 (load-theme 'solarized-dark t)
 
 ;; Color customizations
