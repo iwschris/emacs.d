@@ -18,6 +18,7 @@
 (require-package 'puppet-mode)
 (require-package 'jedi)
 (require-package 'web-mode)
+(require-package 'yaml-mode)
 
 ;; Jabber mode
 (require-package 'jabber)
