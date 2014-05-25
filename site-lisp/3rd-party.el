@@ -19,6 +19,7 @@
 (require-package 'jedi)
 (require-package 'web-mode)
 (require-package 'yaml-mode)
+(require-package 'dockerfile-mode)
 
 ;; Jabber mode
 (require-package 'jabber)
